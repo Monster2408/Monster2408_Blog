@@ -27,9 +27,8 @@
     </div>
     <div class="nav">
         <ul>
-            <li><a href="/blog/">Home</a></li>
-            <li><a href="/blog/about/">About</a></li>
-            <li><a href="/blog/contact/">Contact</a></li>
+            <li><a href="/blog/desk-item/"><span class="title">Desk Item</span><span class="sub-title">デスク周り</span></a></li>
+            <li><a href="/blog/pc-accessory/"><span class="title">PC Accessory</span><span class="sub-title">PC周辺機器</span></a></li>
         </ul>
     </div>
 </header>
