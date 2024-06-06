@@ -237,6 +237,10 @@ class MyFunction {
         return (strpos($haystack, $needle) === 0);
     }
 
+    public function getTitle() {
+        return $this->title;
+    }
+
     public function setTitle($title) {
         $this->title = $title;
     }
@@ -254,10 +258,6 @@ class MyFunction {
 
     public function getPageUrl() {
         return $this->pageUrl;
-    }
-
-    public function getTitle() {
-        return $this->title;
     }
 
     public function getDescription() {

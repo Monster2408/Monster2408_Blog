@@ -14,21 +14,16 @@ $func->addStyle('/assets/css/style.min.css');
     <body>
         <?php include('./assets/include/header.php'); ?>
         <div class="contents">
-            <div class="about-area">
-            </div>
-            <div class="p-1">
-                <div class="title"><h2 lang="ja">アクセス解析中</h2></div>
-                <div class="body">
-                    <div class="inner">
-                        <div class="system-area count-area">
-                            <p lang="ja">総アクセス数：<?php echo $viewCountAll; ?></p>
-                            <p lang="ja">今日のアクセス数：<?php echo $viewCountToday; ?></p>
-                            <p lang="ja">昨日のアクセス数：<?php echo $viewCountYesterday; ?></p>
-                        </div>
-                    </div>
+            <div class="body p-1">
+                <div class="top-inner">
+                    <img src="<?php echo $func->getUrl(); ?>/assets/img/monster2408-blog-top.jpg" alt="">
+                </div>
+                <div class="inner">
+                    <div class="recommend-title"><h2>おすすめ記事</h2></div>
+                    <div class="recommend-area"></div>
                 </div>
             </div>
         </div>
-        <!-- <?php include('./assets/include/footer.php'); ?> -->
+        <?php include('./assets/include/footer.php'); ?>
     </body>
 </html>

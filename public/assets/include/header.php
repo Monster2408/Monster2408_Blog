@@ -13,8 +13,8 @@
 <header>
     <?php if ($func->getDiscordLib()->isLogin()): ?>
     <div class="admin-menu">
-        <a href="./create.php">新規作成</a> | 
-        <a href="./edit.php">編集</a>
+        <a href="./create">新規作成</a> | 
+        <a href="./edit">編集</a>
     </div>
     <?php endif; ?>
     <div class="menu-btn">
