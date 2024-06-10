@@ -28,6 +28,73 @@
                     margin-bottom: 20px;
                 }
             }
+            .recommend-area {
+                display: flex;
+                flex-wrap: wrap;
+                .l-wrapper {
+                    margin: 3rem auto;
+                    width: 320px;
+                    .card {
+                        background-color: #fff;
+                        box-shadow: 0 0 8px rgba(0, 0, 0, .16);
+                        color: #212121;
+                        text-decoration: none;
+                        .card__header {
+                            display: flex;
+                            flex-wrap: wrap;
+                            .card__title {
+                                padding: 1rem 1rem 0;
+                                font-size: 1.25rem;
+                                order: 1;
+                            }
+                            .card__thumbnail {
+                                margin: 0;
+                                order: 0;
+                                .card__image {
+                                    width: 100%;
+                                }
+                                img {
+                                    max-width: 100%;
+                                    vertical-align: bottom;
+                                }
+                            }
+                        }
+                        .card__body {
+                            padding: 1rem;
+                            .card__text {
+                                font-size: .75rem;
+                                &.-number {
+                                    text-align: right;
+                                }
+                            }
+                            .card__text + .card__text {
+                                margin-top: .5rem;
+                            }
+                        }
+                        .card__footer {
+                            padding: 1rem;
+                            border-top: 1px solid #ddd;
+                        
+                            .button {
+                                display: inline-block;
+                                text-decoration: none;
+                                transition: background-color .3s ease-in-out;
+                                &.-compact {
+                                    padding: .5rem 1rem;
+                                    border-radius: .25rem;
+                                    background-color: #26a69a;
+                                    color: #fff;
+                                    font-weight: bold;
+                                    &:hover,
+                                    &:focus {
+                                        background-color: #80cbc4;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

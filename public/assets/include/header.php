@@ -11,12 +11,6 @@
     $viewCountYesterday = $viewCounterData["yesterday_count"];
 ?>
 <header>
-    <?php if ($func->getDiscordLib()->isLogin()): ?>
-    <div class="admin-menu">
-        <a href="./create">新規作成</a> | 
-        <a href="./edit">編集</a>
-    </div>
-    <?php endif; ?>
     <div class="menu-btn">
         <span></span>
         <span></span>

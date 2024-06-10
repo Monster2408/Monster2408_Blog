@@ -5,9 +5,6 @@
         <p>今日のアクセス数：<?php echo $viewCountToday; ?></p>
         <p>昨日のアクセス数：<?php echo $viewCountYesterday; ?></p>
     </div>
-    <div class="admin-area">
-        <?php echo $func->disLib->loginButton(); ?>
-    </div>
     <div class="info">
         <p>©2021-<?php echo date("Y"); ?> もんすたぁのブログ</p>
     </div>

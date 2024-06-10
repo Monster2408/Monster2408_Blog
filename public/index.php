@@ -20,10 +20,11 @@ $func->addStyle('/assets/css/style.min.css');
                 </div>
                 <div class="inner">
                     <div class="recommend-title"><h2>おすすめ記事</h2></div>
-                    <div class="recommend-area"></div>
+                    <div class="recommend-area" id="recommend-area"></div>
                 </div>
             </div>
         </div>
         <?php include('./assets/include/footer.php'); ?>
+        <script src="<?php echo $func->getNoCacheUrl("/assets/js/feed-load.js"); ?>"></script>
     </body>
 </html>

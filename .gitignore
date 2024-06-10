@@ -6,6 +6,7 @@ test.php
 client_secret_409727543736-36oqie7alrokhoirgen3s0vbunahj2id.apps.googleusercontent.com.json
 test.php
 data/
+wp-config.php
 
 # Windows thumbnail cache files
 Thumbs.db
