@@ -1,28 +1,13 @@
+// urlのp=〇部分を取得するための正規表現
+const url = window.location.href;
+var post_id = url.split("?p=")[1];
 window.addEventListener('load',function(){
     function reqListener() {
-        function getCardHtml(title, image, dateStr, link) {
-            var html_text = '<div class="l-wrapper">';
-            html_text += '<article class="card">';
-            html_text += '<div class="card__header">';
-            html_text += '<h3 class="card__title">' + title + '</h3>';
-            html_text += '<figure class="card__thumbnail">';
-            html_text += '<img src="' + image + '" class="card__image">';
-            html_text += '</figure>';
-            html_text += '</div>';
-            html_text += '<div class="card__body">';
-            html_text += '<p class="card__text">投稿日：' + dateStr + '</p>';
-            html_text += '</div>';
-            html_text += '<div class="card__footer">';
-            html_text += '<p class="card__text"><a href="' + link + '" class="button -compact">' + title + 'の詳細を見る</a></p>';
-            html_text += '</div>';
-            html_text += '</article>';
-            html_text += '</div>';
-            return html_text;
-        }
         var domDoc = this.responseXML;
         console.log(domDoc);
         var items = domDoc.getElementsByTagName("item");
-        var recommendArea = document.getElementById("recommend-area");
+        var title_area = document.getElementById("post-title");
+        var contentArea = document.getElementById("content-area");
         var data_text = ""; 
         for (var i = 0; i < items.length; i++) {
             var item = items[i];
@@ -39,15 +24,16 @@ window.addEventListener('load',function(){
             if (description.match(/<img[^>]+src="([^">]+)"/) != null) {
                 image = description.match(/<img[^>]+src="([^">]+)"/)[1];
             }
-            if (location.href.match(/localhost/)) {
-                data_text += getCardHtml(title, image, dateStr, "https://localhost/?p=" + link_id);
+            if (link_id != post_id) {
+                continue;
             } else {
-                data_text += getCardHtml(title, image, dateStr, "https://monster2408.com/featured-products/?p=" + link_id);
+                console.log("post_id: " + post_id);
+                console.log("link_id: " + link_id);
+                title_area.innerHTML = title;
+                contentArea.innerHTML = description;
             }
         }
-        recommendArea.innerHTML = data_text;
     }
-
     const req = new XMLHttpRequest();
     req.addEventListener("load", reqListener);
     var url = "https://monster2408.com/blog/feed/";
@@ -58,4 +44,4 @@ window.addEventListener('load',function(){
     req.open("GET", url);
     req.setRequestHeader("Content-Type", "text/xml");
     req.send();
-})
+});

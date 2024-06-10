@@ -3,7 +3,11 @@
     $FILE_NAME = basename($FULL_URI); 
 
     include_once($func->getAssetsPath().'/assets/view_counter.php');
-    $viewCounter = new ViewCounter($func->getAssetsPath().'/assets/data/db/');
+    if (strpos($func->getUrl(), "localhost") !== false) {
+        $viewCounter = new ViewCounter($func->getAssetsPath().'/assets/data/db/');
+    } else {
+        $viewCounter = new ViewCounter($func->getAssetsPath().'/../assets/data/db/');
+    }
     
     $viewCounterData = $viewCounter->getCounterData();
     $viewCountAll = $viewCounterData["all_count"];
