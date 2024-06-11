@@ -71,6 +71,8 @@ header {
     .menu-btn {
         display: none;
         font-size: 30px;
+        margin-top: 20px;
+        margin-left: 10px;
         cursor: pointer;
         span {
             display: block;
@@ -82,8 +84,13 @@ header {
     }
 }
 
-
-
-
-
-
+@media screen and (max-width: 768px) {
+    header {
+        .nav {
+            display: none;
+        }
+        .menu-btn {
+            display: block;
+        }
+    }
+}
