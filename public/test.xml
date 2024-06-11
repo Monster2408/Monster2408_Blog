@@ -5,21 +5,29 @@
 	xmlns:atom="http://www.w3.org/2005/Atom"
 	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
 	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
-	xmlns:media="http://search.yahoo.com/mrss/"
->
+	>
 
 <channel>
 	<title>もんすたぁのブログ</title>
 	<atom:link href="https://monster2408.com/blog/feed/" rel="self" type="application/rss+xml" />
 	<link>https://monster2408.com/blog</link>
 	<description>日々の生活を少し便利に</description>
-	<lastBuildDate>Tue, 04 Jun 2024 20:56:36 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 11 Jun 2024 03:19:25 +0000</lastBuildDate>
 	<language>ja</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
 	1	</sy:updateFrequency>
-	<generator>https://kerosin.digital/rss-chimp</generator>	<item>
+	<generator>https://wordpress.org/?v=6.5.4</generator>
+
+<image>
+	<url>https://monster2408.com/blog/wp-content/uploads/2024/05/cropped-17aae59ac1d9a60b2eba452641b83612-32x32.png</url>
+	<title>もんすたぁのブログ</title>
+	<link>https://monster2408.com/blog</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
 		<title>LAWSONのアールグレイティーが終了した話</title>
 		<link>https://monster2408.com/blog/2024/05/31/lawson%e3%81%ae%e3%82%a2%e3%83%bc%e3%83%ab%e3%82%b0%e3%83%ac%e3%82%a4%e3%83%86%e3%82%a3%e3%83%bc%e3%81%8c%e7%b5%82%e4%ba%86%e3%81%97%e3%81%9f%e8%a9%b1/</link>
 					<comments>https://monster2408.com/blog/2024/05/31/lawson%e3%81%ae%e3%82%a2%e3%83%bc%e3%83%ab%e3%82%b0%e3%83%ac%e3%82%a4%e3%83%86%e3%82%a3%e3%83%bc%e3%81%8c%e7%b5%82%e4%ba%86%e3%81%97%e3%81%9f%e8%a9%b1/#respond</comments>
@@ -66,7 +74,8 @@
 		
 		<dc:creator><![CDATA[monster2408]]></dc:creator>
 		<pubDate>Fri, 31 May 2024 13:49:52 +0000</pubDate>
-				<category><![CDATA[ガジェット]]></category>
+				<category><![CDATA[おすすめ]]></category>
+		<category><![CDATA[ガジェット]]></category>
 		<category><![CDATA[パソコン]]></category>
 		<category><![CDATA[パソコン周辺機器]]></category>
 		<guid isPermaLink="false">https://monster2408.com/blog/?p=30</guid>
@@ -103,7 +112,8 @@
 		
 		<dc:creator><![CDATA[monster2408]]></dc:creator>
 		<pubDate>Fri, 31 May 2024 08:02:03 +0000</pubDate>
-				<category><![CDATA[ガジェット]]></category>
+				<category><![CDATA[おすすめ]]></category>
+		<category><![CDATA[ガジェット]]></category>
 		<category><![CDATA[ケーブル整理]]></category>
 		<category><![CDATA[パソコン]]></category>
 		<guid isPermaLink="false">https://monster2408.com/blog/?p=28</guid>
@@ -148,7 +158,8 @@
 		
 		<dc:creator><![CDATA[monster2408]]></dc:creator>
 		<pubDate>Fri, 31 May 2024 07:56:23 +0000</pubDate>
-				<category><![CDATA[ガジェット]]></category>
+				<category><![CDATA[おすすめ]]></category>
+		<category><![CDATA[ガジェット]]></category>
 		<category><![CDATA[パソコン]]></category>
 		<guid isPermaLink="false">https://monster2408.com/blog/?p=17</guid>
 
@@ -190,7 +201,8 @@
 		
 		<dc:creator><![CDATA[monster2408]]></dc:creator>
 		<pubDate>Thu, 30 May 2024 13:22:02 +0000</pubDate>
-				<category><![CDATA[alexa]]></category>
+				<category><![CDATA[余談]]></category>
+		<category><![CDATA[alexa]]></category>
 		<category><![CDATA[switchbot]]></category>
 		<category><![CDATA[ガジェット]]></category>
 		<category><![CDATA[スマートホーム]]></category>

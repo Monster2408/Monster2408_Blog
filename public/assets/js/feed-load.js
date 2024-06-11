@@ -34,6 +34,18 @@ window.addEventListener('load',function(){
             var date = new Date(pubDate);
             var dateStr = date.getFullYear() + "/" + (date.getMonth() + 1) + "/" + date.getDate();
             var description = item.getElementsByTagName("content:encoded")[0].textContent;
+            var categories_temp = item.getElementsByTagName("category");
+            var categories = [];
+            // categoryは<![CDATA[カテゴリ名]]>という形式で格納されている
+            for (var j = 0; j < categories_temp.length; j++) {
+                var category = categories_temp[j].textContent;
+                category = category.replace(/<!\[CDATA\[/, "");
+                category = category.replace(/\]\]>/, "");
+                categories.push(category);
+            }
+            if (categories.indexOf("おすすめ") == -1) {
+                continue;
+            }
             // descriptionにimgタグがあるかどうかを判定
             var image = "https://monster2408.com/blog/wp-content/themes/cocoon-master/images/no-image-320.png";
             if (description.match(/<img[^>]+src="([^">]+)"/) != null) {

@@ -124,3 +124,113 @@
     background-color: #5865F2;
     border-color: #5865F2;
 }
+
+.a-wrap {
+    margin-bottom: 1.8rem;
+    .blogcard {
+        border-color: #e3e3e3 #cecece #b4b4b4 #d6d6d6;
+        border-width: 1px;
+        border-style: solid;
+        padding: 1.6% 2.2% 2%;
+        border-radius: 4px;
+        line-height: 1.6;
+        position: relative;
+        .blogcard-label {
+            position: absolute;
+            top: -18px;
+            left: 16px;
+            font-size: 13px;
+            padding: 3px 0.6em;
+            background-color: #333;
+            color: #fff;
+            border-radius: 3px;
+            letter-spacing: 0.7px;
+            display: none;
+        }
+        .blogcard-thumbnail {
+            float: left;
+            margin-top: 3px;
+            width: 160px;
+            margin-right: 1.6%;
+            img {
+                width: 100%;
+            }
+        }
+        .blogcard-content {
+            margin-left: 170px;
+            max-height: 140px;
+            min-height: 100px;
+            overflow: hidden;
+            .blogcard-title {
+                font-weight: bold;
+                margin-bottom: 0.4em;
+            }
+            .blogcard-snippet {
+                display: -webkit-box;
+                overflow: hidden;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 3;
+            }
+        }
+        .blogcard-footer {
+            clear: both;
+            font-size: 16px;
+            padding-top: 0.6%;
+            .blogcard-site {
+                margin-top: -15px;
+                float: left;
+                display: flex;
+                align-content: center;
+                .blogcard-favicon {
+                    margin-right: 4px;
+                    margin-top: 2px;
+                    img.blogcard-favicon-image {
+                        border: 0;
+                        box-shadow: none;
+                    }
+                    img {
+                        max-width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.wp-block-cocoon-blocks-icon-box {
+    
+}
+.common-icon-box,
+.information-box {
+    padding: 20px 20px 20px 72px;
+    border-radius: 4px;
+    position: relative;
+    display: block;
+    &::before {
+        
+        font-family: "FontAwesome";
+        font-size: 34px;
+        position: absolute;
+        padding-right: 0.15em;
+        line-height: 1em;
+        top: 50%;
+        margin-top: -0.5em;
+        left: 10px;
+        width: 44px;
+        text-align: center;
+    }
+}
+.information-box {
+    background: #f3fafe;
+    border: 1px solid #bde4fc;
+    margin-bottom: 1.8rem;
+    &::before {
+        content: "\f05a";
+        color: #87cefa;
+        border-right: 1px solid #bde4fc;
+    }
+}
+.cf {
+    margin-bottom: 1.8rem;
+}

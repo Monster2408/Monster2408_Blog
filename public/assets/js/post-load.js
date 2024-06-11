@@ -4,11 +4,10 @@ var post_id = url.split("?p=")[1];
 window.addEventListener('load',function(){
     function reqListener() {
         var domDoc = this.responseXML;
-        console.log(domDoc);
         var items = domDoc.getElementsByTagName("item");
         var title_area = document.getElementById("post-title");
         var contentArea = document.getElementById("content-area");
-        var data_text = ""; 
+        var is_post = false;
         for (var i = 0; i < items.length; i++) {
             var item = items[i];
             var title = item.getElementsByTagName("title")[0].textContent;
@@ -27,11 +26,14 @@ window.addEventListener('load',function(){
             if (link_id != post_id) {
                 continue;
             } else {
-                console.log("post_id: " + post_id);
-                console.log("link_id: " + link_id);
                 title_area.innerHTML = title;
                 contentArea.innerHTML = description;
+                is_post = true;
+                break;
             }
+        }
+        if (!is_post) {
+            title_area.innerHTML = "記事が見つかりませんでした";
         }
     }
     const req = new XMLHttpRequest();
