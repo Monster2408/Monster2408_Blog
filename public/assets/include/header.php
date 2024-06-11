@@ -14,19 +14,19 @@
     $viewCountToday = $viewCounterData["today_count"];
     $viewCountYesterday = $viewCounterData["yesterday_count"];
 ?>
-<header>
+<header class="d-flex">
     <div class="menu-btn">
         <span></span>
         <span></span>
         <span></span>
     </div>
     <div class="logo">
-        <?php echo $func->getTitle(); ?>
+        <a href="<?php echo $func->getUrl(); ?>" class="blog-logo-text">Monster</a>
     </div>
     <div class="nav">
         <ul>
-            <li><a href="/blog/desk-item/"><span class="title">Desk Item</span><span class="sub-title">デスク周り</span></a></li>
-            <li><a href="/blog/pc-accessory/"><span class="title">PC Accessory</span><span class="sub-title">PC周辺機器</span></a></li>
+            <li><a href="<?php echo $func->getUrl(); ?>/desk-item/"><span class="title">Desk Item</span><span class="sub-title">デスク周り</span></a></li>
+            <li><a href="<?php echo $func->getUrl(); ?>/pc-accessory/"><span class="title">PC Accessory</span><span class="sub-title">PC周辺機器</span></a></li>
         </ul>
     </div>
 </header>

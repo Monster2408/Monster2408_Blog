@@ -12,7 +12,7 @@
 	<atom:link href="https://monster2408.com/blog/feed/" rel="self" type="application/rss+xml" />
 	<link>https://monster2408.com/blog</link>
 	<description>日々の生活を少し便利に</description>
-	<lastBuildDate>Tue, 11 Jun 2024 03:19:25 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 11 Jun 2024 15:46:18 +0000</lastBuildDate>
 	<language>ja</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,26 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>デスク周りに便利なetc</title>
+		<link>https://monster2408.com/blog/2024/06/12/%e3%83%87%e3%82%b9%e3%82%af%e5%91%a8%e3%82%8a%e3%81%ab%e4%be%bf%e5%88%a9%e3%81%aaetc/</link>
+					<comments>https://monster2408.com/blog/2024/06/12/%e3%83%87%e3%82%b9%e3%82%af%e5%91%a8%e3%82%8a%e3%81%ab%e4%be%bf%e5%88%a9%e3%81%aaetc/#respond</comments>
+		
+		<dc:creator><![CDATA[monster2408]]></dc:creator>
+		<pubDate>Tue, 11 Jun 2024 15:46:17 +0000</pubDate>
+				<category><![CDATA[非表示]]></category>
+		<guid isPermaLink="false">https://monster2408.com/blog/?p=54</guid>
+
+					<description><![CDATA[ここに本文]]></description>
+										<content:encoded><![CDATA[
+<p>ここに本文</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://monster2408.com/blog/2024/06/12/%e3%83%87%e3%82%b9%e3%82%af%e5%91%a8%e3%82%8a%e3%81%ab%e4%be%bf%e5%88%a9%e3%81%aaetc/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
 		<title>LAWSONのアールグレイティーが終了した話</title>
 		<link>https://monster2408.com/blog/2024/05/31/lawson%e3%81%ae%e3%82%a2%e3%83%bc%e3%83%ab%e3%82%b0%e3%83%ac%e3%82%a4%e3%83%86%e3%82%a3%e3%83%bc%e3%81%8c%e7%b5%82%e4%ba%86%e3%81%97%e3%81%9f%e8%a9%b1/</link>
 					<comments>https://monster2408.com/blog/2024/05/31/lawson%e3%81%ae%e3%82%a2%e3%83%bc%e3%83%ab%e3%82%b0%e3%83%ac%e3%82%a4%e3%83%86%e3%82%a3%e3%83%bc%e3%81%8c%e7%b5%82%e4%ba%86%e3%81%97%e3%81%9f%e8%a9%b1/#respond</comments>

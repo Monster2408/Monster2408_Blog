@@ -1,9 +1,10 @@
 <?php
 
-include('./assets/function.php');
-$func = new MyFunction('./assets/config.php');
+include('../assets/function.php');
+$func = new MyFunction('../assets/config.php');
 
 $func->addStyle('/assets/css/style.min.css');
+// $func->setTitle("デスク周り");
 
 function is_page() {
     return empty($_GET['p']) === false;
@@ -28,26 +29,15 @@ if (is_page()) {
                     <img src="<?php echo $top_image; ?>" alt="">
                 </div>
                 <div class="inner">
-                    <?php
-                        if (is_page() === false) {
-                            echo '<div class="recommend-title"><h2>おすすめ記事</h2></div>';
-                            echo '<div class="recommend-area" id="recommend-area"></div>';
-                        } else {
-                            echo '<div class="recommend-title"><h2 id="post-title"></h2></div>';
-                            echo '<div class="content" id="content-area"></div>';
-                        }
-                    ?>
+                    <div class="recommend-title"><h2 id="post-title"></h2></div>
+                    <div class="content" id="content-area"></div>
                 </div>
             </div>
         </div>
         <?php include($func->getAssetsPath().'/assets/include/footer.php'); ?>
         <?php
-            if (is_page() === false) {
-                echo '<script src="'.$func->getNoCacheUrl("/assets/js/feed-load.js").'"></script>';
-            } else {
-                echo '<script src="'.$func->getNoCacheUrl("/assets/js/post-load.js").'"></script>';
-                echo '<script>load_post('.$_GET['p'].');</script>';
-            }
+            echo '<script src="'.$func->getNoCacheUrl("/assets/js/post-load.js").'"></script>';
         ?>
+        <script>load_post(54);</script>
     </body>
 </html>

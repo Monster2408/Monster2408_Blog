@@ -46,6 +46,9 @@ window.addEventListener('load',function(){
             if (categories.indexOf("おすすめ") == -1) {
                 continue;
             }
+            if (categories.indexOf("非表示") != -1) {
+                continue;
+            }
             // descriptionにimgタグがあるかどうかを判定
             var image = "https://monster2408.com/blog/wp-content/themes/cocoon-master/images/no-image-320.png";
             if (description.match(/<img[^>]+src="([^">]+)"/) != null) {

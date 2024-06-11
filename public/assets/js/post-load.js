@@ -1,7 +1,4 @@
-// urlのp=〇部分を取得するための正規表現
-const url = window.location.href;
-var post_id = url.split("?p=")[1];
-window.addEventListener('load',function(){
+function load_post(post_id) {
     function reqListener() {
         var domDoc = this.responseXML;
         var items = domDoc.getElementsByTagName("item");
@@ -41,9 +38,9 @@ window.addEventListener('load',function(){
     var url = "https://monster2408.com/blog/feed/";
     // 現在URLがlocalhostの場合はローカルのXMLを読み込む
     if (location.href.match(/localhost/)) {
-        url = "./test.xml";
+        url = "https://localhost/test.xml";
     }
     req.open("GET", url);
     req.setRequestHeader("Content-Type", "text/xml");
     req.send();
-});
+}
