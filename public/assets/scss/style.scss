@@ -31,6 +31,7 @@
             .recommend-area {
                 display: flex;
                 flex-wrap: wrap;
+                // カード式のレイアウト
                 .l-wrapper {
                     margin: 3rem auto;
                     width: 320px;
@@ -88,6 +89,88 @@
                                     &:hover,
                                     &:focus {
                                         background-color: #707070;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                // 記事一覧式のレイアウト
+                ul.post-list {
+                    list-style: none;
+                    li.post-list__item {
+                        a.post-list__link {
+                            display: flex;
+                            text-decoration: none;
+                            color: #000;
+                            .post-list__thumbnail {
+                                width: 300px;
+                                img {
+                                    width: 100%;
+                                }
+                            }
+                            .post-list__content {
+                                margin-left: 10px;
+                                display: flex;
+                                flex-direction: column;
+                                .post-list__title {
+                                    font-size: 1.25rem;
+                                    font-weight: 700;
+                                }
+                                .post-list__info {
+                                    display: flex;
+                                    .post-list__date,
+                                    .post-list__category {
+                                        margin-right: 10px;
+                                        &::before {
+                                            font: var(--fa-font-solid);
+                                            margin-right: 2px;
+                                        }
+                                    }
+                                    .post-list__date {
+                                        &::before {
+                                            content: '\f017';
+                                        }
+                                    }
+                                    .post-list__category {
+                                        &::before {
+                                            content: '\f07b';
+                                        }
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .contents {
+        .body {
+            .inner {
+                .recommend-area {
+                    ul.post-list {
+                        li.post-list__item {
+                            a.post-list__link {
+                                .post-list__thumbnail {
+                                    width: 28%;
+                                    img {
+                                        width: 100%;
+                                    }
+                                }
+                                .post-list__content {
+                                    .post-list__title {
+                                        font-size: 1rem;
+                                    }
+                                    .post-list__info {
+                                        .post-list__date,
+                                        .post-list__category {
+                                            font-size: .75rem;
+                                        }
                                     }
                                 }
                             }

@@ -12,7 +12,7 @@
 	<atom:link href="https://monster2408.com/blog/feed/" rel="self" type="application/rss+xml" />
 	<link>https://monster2408.com/blog</link>
 	<description>日々の生活を少し便利に</description>
-	<lastBuildDate>Fri, 14 Jun 2024 10:53:58 +0000</lastBuildDate>
+	<lastBuildDate>Sun, 16 Jun 2024 20:40:47 +0000</lastBuildDate>
 	<language>ja</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -35,9 +35,9 @@
 		<dc:creator><![CDATA[monster2408]]></dc:creator>
 		<pubDate>Tue, 11 Jun 2024 16:04:07 +0000</pubDate>
 				<category><![CDATA[非表示]]></category>
-		<category><![CDATA[ガジェット]]></category>
-		<category><![CDATA[パソコン]]></category>
-		<category><![CDATA[パソコン周辺機器]]></category>
+		<category><![CDATA[tag:ガジェット]]></category>
+		<category><![CDATA[tag:パソコン]]></category>
+		<category><![CDATA[tag:パソコン周辺機器]]></category>
 		<guid isPermaLink="false">https://monster2408.com/blog/?p=56</guid>
 
 					<description><![CDATA[ここに本文]]></description>
@@ -119,8 +119,9 @@
 		<pubDate>Fri, 31 May 2024 13:49:52 +0000</pubDate>
 				<category><![CDATA[おすすめ]]></category>
 		<category><![CDATA[ガジェット]]></category>
-		<category><![CDATA[パソコン]]></category>
-		<category><![CDATA[パソコン周辺機器]]></category>
+		<category><![CDATA[tag:ガジェット]]></category>
+		<category><![CDATA[tag:パソコン]]></category>
+		<category><![CDATA[tag:パソコン周辺機器]]></category>
 		<guid isPermaLink="false">https://monster2408.com/blog/?p=30</guid>
 
 					<description><![CDATA[ノートパソコンをデスク上に直置きするとそのスペースが死んでしまいますがこのアーマースタンドがあればデスクを広々使えます。 https://amzn.to/4aFUD0damzn.to]]></description>
@@ -156,9 +157,7 @@
 		<dc:creator><![CDATA[monster2408]]></dc:creator>
 		<pubDate>Fri, 31 May 2024 08:02:03 +0000</pubDate>
 				<category><![CDATA[おすすめ]]></category>
-		<category><![CDATA[ガジェット]]></category>
 		<category><![CDATA[ケーブル整理]]></category>
-		<category><![CDATA[パソコン]]></category>
 		<guid isPermaLink="false">https://monster2408.com/blog/?p=28</guid>
 
 					<description><![CDATA[机の上や床にコードが散らかっていませんか？そんな問題を解消できるのがこのデスク下ゲーブル収納トレー。 他社製品と違ってワイヤー式のため埃もたまりません。 https://amzn.to/3KoI3HYamzn.to]]></description>
@@ -202,8 +201,7 @@
 		<dc:creator><![CDATA[monster2408]]></dc:creator>
 		<pubDate>Fri, 31 May 2024 07:56:23 +0000</pubDate>
 				<category><![CDATA[おすすめ]]></category>
-		<category><![CDATA[ガジェット]]></category>
-		<category><![CDATA[パソコン]]></category>
+		<category><![CDATA[マイク]]></category>
 		<guid isPermaLink="false">https://monster2408.com/blog/?p=17</guid>
 
 					<description><![CDATA[このブログで初めてご紹介するのは私が3年間愛用しているコンデンサーマイクです。 https://amzn.to/451NI0damzn.to コンデンサーマイクというと高いイメージが切り離せないと思いますがこのマイクは良 [&#8230;]]]></description>
@@ -245,12 +243,12 @@
 		<dc:creator><![CDATA[monster2408]]></dc:creator>
 		<pubDate>Thu, 30 May 2024 13:22:02 +0000</pubDate>
 				<category><![CDATA[余談]]></category>
-		<category><![CDATA[alexa]]></category>
-		<category><![CDATA[switchbot]]></category>
-		<category><![CDATA[ガジェット]]></category>
-		<category><![CDATA[スマートホーム]]></category>
-		<category><![CDATA[パソコン]]></category>
-		<category><![CDATA[パソコン周辺機器]]></category>
+		<category><![CDATA[tag:alexa]]></category>
+		<category><![CDATA[tag:switchbot]]></category>
+		<category><![CDATA[tag:ガジェット]]></category>
+		<category><![CDATA[tag:スマートホーム]]></category>
+		<category><![CDATA[tag:パソコン]]></category>
+		<category><![CDATA[tag:パソコン周辺機器]]></category>
 		<guid isPermaLink="false">https://monster2408.com/blog/?p=9</guid>
 
 					<description><![CDATA[「ランチはじめました」みたいなタイトルからブログを開始します。日々の生活をあれこれ便利にしてグータラ生活を送れるように奮闘する様子を紹介します。 投稿予定のネタはSwitchbotを使ったショートカット術やパソコン周りの [&#8230;]]]></description>

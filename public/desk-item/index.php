@@ -29,7 +29,7 @@ if (is_page()) {
                     <img src="<?php echo $top_image; ?>" alt="">
                 </div>
                 <div class="inner">
-                    <div class="recommend-title"><h2 id="post-title"></h2></div>
+                    <div class="recommend-title"><h2 id="post-title"><i class="fa-solid fa-spinner fa-spin"></i>読み込み中<i class="fa-solid fa-spinner fa-spin"></i></h2></div>
                     <div class="content" id="content-area"></div>
                 </div>
             </div>

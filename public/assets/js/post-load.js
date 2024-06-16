@@ -30,7 +30,7 @@ function load_post(post_id) {
             }
         }
         if (!is_post) {
-            title_area.innerHTML = "記事が見つかりませんでした";
+            title_area.innerHTML = "<h2>記事が見つかりませんでした</h2>";
         }
     }
     const req = new XMLHttpRequest();

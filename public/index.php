@@ -31,13 +31,13 @@ if (is_page()) {
                     <?php
                         if (is_page() === false) {
                             echo '<div class="recommend-title"><h2>おすすめ記事</h2></div>';
-                            echo '<div class="recommend-area" id="recommend-area"><h2><i class="fa-solid fa-spinner fa-spin"></i>読み込み中<i class="fa-solid fa-spinner fa-spin"></h2></i></div>';
+                            echo '<div class="recommend-area" id="recommend-area"><h2><i class="fa-solid fa-spinner fa-spin"></i>読み込み中<i class="fa-solid fa-spinner fa-spin"></i></h2></i></div>';
                             
                             echo '<div class="recommend-title"><h2>新着記事</h2></div>';
-                            echo '<div class="recommend-area" id="new-post-area"><h2><i class="fa-solid fa-spinner fa-spin"></i>読み込み中<i class="fa-solid fa-spinner fa-spin"></h2></i></div>';
+                            echo '<div class="recommend-area" id="new-post-area"><h2><i class="fa-solid fa-spinner fa-spin"></i>読み込み中<i class="fa-solid fa-spinner fa-spin"></i></h2></i></div>';
                         } else {
                             echo '<div class="recommend-title"><h2 id="post-title"></h2></div>';
-                            echo '<div class="content" id="content-area"><h2><i class="fa-solid fa-spinner fa-spin"></i>読み込み中<i class="fa-solid fa-spinner fa-spin"></h2></div>';
+                            echo '<div class="content" id="content-area"><h2><i class="fa-solid fa-spinner fa-spin"></i>読み込み中<i class="fa-solid fa-spinner fa-spin"></i></h2></div>';
                         }
                     ?>
                 </div>

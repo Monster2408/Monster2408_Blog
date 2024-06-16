@@ -1,6 +1,9 @@
 window.addEventListener('load',function(){
     function reqListener() {
-        function getCardHtml(title, image, dateStr, link) {
+        function getCardHtml(title, image, dateStr, link, category = "") {
+            if (category == "") {
+                category = "未分類";
+            }
             var html_text = '<div class="l-wrapper">';
             html_text += '<article class="card">';
             html_text += '<div class="card__header">';
@@ -19,13 +22,38 @@ window.addEventListener('load',function(){
             html_text += '</div>';
             return html_text;
         }
+        function getPostCardHtml(title, image, dateStr, link, category = "") {
+            if (category == "") {
+                category = "未分類";
+            }
+            var html_text = '<li class="post-list__item">';
+            html_text += '<a href="' + link + '" class="post-list__link">';
+            html_text += '<div class="post-list__thumbnail">';
+            html_text += '<img src="' + image + '" class="post-list__image">';
+            html_text += '</div>';
+            html_text += '<div class="post-list__content">';
+            html_text += '<h3 class="post-list__title">' + title + '</h3>';
+            html_text += '<p class="post-list__info">';
+            html_text += '<span class="post-list__category">' + category + '</span>';
+            html_text += '<span class="post-list__date">' + dateStr + '</span>';
+            html_text += '</p>';
+            html_text += '</div>';
 
-        function getCardObject(title, image, dateStr, link) {
+            html_text += '</a>';
+            html_text += '</li>';
+            return html_text;
+        }
+
+        function getCardObject(title, image, dateStr, link, category = "") {
+            if (category == "") {
+                category = "未分類";
+            }
             var card = {
                 title: title,
                 image: image,
                 dateStr: dateStr,
-                link: link
+                link: link,
+                category: category
             };
             return card;
         }
@@ -49,10 +77,17 @@ window.addEventListener('load',function(){
             var categories_temp = item.getElementsByTagName("category");
             var categories = [];
             // categoryは<![CDATA[カテゴリ名]]>という形式で格納されている
+            var main_category = "未分類";
             for (var j = 0; j < categories_temp.length; j++) {
                 var category = categories_temp[j].textContent;
                 category = category.replace(/<!\[CDATA\[/, "");
                 category = category.replace(/\]\]>/, "");
+                if (category.startsWith("tag:")) {
+                    continue;
+                }
+                if (category != "おすすめ") {
+                    main_category = category;
+                }
                 categories.push(category);
             }
             // descriptionにimgタグがあるかどうかを判定
@@ -64,26 +99,28 @@ window.addEventListener('load',function(){
                 continue;
             }
             if (location.href.match(/localhost/)) {
-                post_list.push(getCardObject(title, image, dateStr, "https://localhost/?p=" + link_id));
+                post_list.push(getCardObject(title, image, dateStr, "https://localhost/?p=" + link_id, main_category));
             } else {
-                post_list.push(getCardObject(title, image, dateStr, "https://monster2408.com/featured-products/?p=" + link_id));
+                post_list.push(getCardObject(title, image, dateStr, "https://monster2408.com/featured-products/?p=" + link_id, main_category));
             }
             if (categories.indexOf("おすすめ") == -1) {
                 continue;
             }
             if (location.href.match(/localhost/)) {
-                data_text += getCardHtml(title, image, dateStr, "https://localhost/?p=" + link_id);
+                data_text += getCardHtml(title, image, dateStr, "https://localhost/?p=" + link_id, main_category);
             } else {
-                data_text += getCardHtml(title, image, dateStr, "https://monster2408.com/featured-products/?p=" + link_id);
+                data_text += getCardHtml(title, image, dateStr, "https://monster2408.com/featured-products/?p=" + link_id, main_category);
             }
         }
         recommendArea.innerHTML = data_text;
         post_list.sort((a, b) => a.dateStr > b.dateStr ? 1 : -1);
-        post_text = "";
+        post_text = '<ul class="post-list">';
         for (var i = 0; i < post_list.length; i++) {
             var post = post_list[i];
-            post_text += getCardHtml(post.title, post.image, post.dateStr, post.link);
+            console.log(post);
+            post_text += getPostCardHtml(post["title"], post["image"], post["dateStr"], post["link"], post["category"]);
         }
+        post_text += '</ul>';
         newPostArea.innerHTML = post_text;
     }
 
