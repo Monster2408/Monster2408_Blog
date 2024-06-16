@@ -1,4 +1,4 @@
-window.addEventListener('load',function(){
+function load_feed(new_post_limit = 10) {
     function reqListener() {
         function getCardHtml(title, image, dateStr, link, category = "") {
             if (category == "") {
@@ -112,16 +112,25 @@ window.addEventListener('load',function(){
                 data_text += getCardHtml(title, image, dateStr, "https://monster2408.com/featured-products/?p=" + link_id, main_category);
             }
         }
-        recommendArea.innerHTML = data_text;
-        post_list.sort((a, b) => a.dateStr > b.dateStr ? 1 : -1);
+        if (recommendArea != null) {
+            recommendArea.innerHTML = data_text;
+        }
+        post_list.sort((a, b) => a.dateStr < b.dateStr ? 1 : -1);
         post_text = '<ul class="post-list">';
+        var post_size = 0;
         for (var i = 0; i < post_list.length; i++) {
             var post = post_list[i];
             console.log(post);
             post_text += getPostCardHtml(post["title"], post["image"], post["dateStr"], post["link"], post["category"]);
+            post_size++;
+            if (new_post_limit != -1 && post_size >= new_post_limit) {
+                break;
+            }
         }
         post_text += '</ul>';
-        newPostArea.innerHTML = post_text;
+        if (newPostArea != null) {
+            newPostArea.innerHTML = post_text;
+        }
     }
 
     const req = new XMLHttpRequest();
@@ -129,9 +138,9 @@ window.addEventListener('load',function(){
     var url = "https://monster2408.com/blog/feed/";
     // 現在URLがlocalhostの場合はローカルのXMLを読み込む
     if (location.href.match(/localhost/)) {
-        url = "./test.xml";
+        url = "https://localhost/test.xml";
     }
     req.open("GET", url);
     req.setRequestHeader("Content-Type", "text/xml");
     req.send();
-})
+}

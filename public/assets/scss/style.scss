@@ -25,7 +25,30 @@
                 h2 {
                     font-size: 30px;
                     font-weight: 700;
-                    margin-bottom: 20px;
+                    padding: 0.8rem 0;
+                    margin-bottom: 0.2rem;
+                    background-image: linear-gradient(90deg, #000000 0 10%, #ffffff 20%);
+                    background-repeat: no-repeat;
+                    background-size: 100% 10%;
+                    background-position: bottom;
+                    &::before {
+                        font: var(--fa-font-solid);
+                        margin-right: 10px;
+                    }
+                }
+                &.recommend-post-list {
+                    h2 {
+                        &::before {
+                            content: '\f025';
+                        }
+                    }
+                }
+                &.new-post-list {
+                    h2 {
+                        &::before {
+                            content: '\f09e';
+                        }
+                    }
                 }
             }
             .recommend-area {
@@ -99,6 +122,7 @@
                 ul.post-list {
                     list-style: none;
                     li.post-list__item {
+                        margin-bottom: 10px;
                         a.post-list__link {
                             display: flex;
                             text-decoration: none;
@@ -143,6 +167,19 @@
                         }
                     }
                 }
+            }
+            .new-post-a-tag {
+                display: block;
+                border: #000 solid 1px;
+                max-width: 300px;
+                margin-right: auto;
+                margin-left: auto;
+                text-align: center;
+                padding: 10px;
+                margin-bottom: 20px;
+                color: #000;
+                font-weight: bold;
+                width: 100%;
             }
         }
     }

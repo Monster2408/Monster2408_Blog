@@ -29,17 +29,17 @@ if (is_page()) {
                 </div>
                 <div class="inner">
                     <?php
-                        if (is_page() === false) {
-                            echo '<div class="recommend-title"><h2>おすすめ記事</h2></div>';
-                            echo '<div class="recommend-area" id="recommend-area"><h2><i class="fa-solid fa-spinner fa-spin"></i>読み込み中<i class="fa-solid fa-spinner fa-spin"></i></h2></i></div>';
+                        if (is_page() === false): ?>
+                            <div class="recommend-title recommend-post-list"><h2>おすすめ記事</h2></div>
+                            <div class="recommend-area" id="recommend-area"><h2><i class="fa-solid fa-spinner fa-spin"></i>読み込み中<i class="fa-solid fa-spinner fa-spin"></i></h2></div>
                             
-                            echo '<div class="recommend-title"><h2>新着記事</h2></div>';
-                            echo '<div class="recommend-area" id="new-post-area"><h2><i class="fa-solid fa-spinner fa-spin"></i>読み込み中<i class="fa-solid fa-spinner fa-spin"></i></h2></i></div>';
-                        } else {
-                            echo '<div class="recommend-title"><h2 id="post-title"></h2></div>';
-                            echo '<div class="content" id="content-area"><h2><i class="fa-solid fa-spinner fa-spin"></i>読み込み中<i class="fa-solid fa-spinner fa-spin"></i></h2></div>';
-                        }
-                    ?>
+                            <div class="recommend-title new-post-list"><h2>新着記事</h2></div>';
+                            <div class="recommend-area" id="new-post-area"><h2><i class="fa-solid fa-spinner fa-spin"></i>読み込み中<i class="fa-solid fa-spinner fa-spin"></i></h2></div>
+                            <a href="./new-post/" class="new-post-a-tag">最新記事一覧</a>
+                        <?php else: ?>
+                            <div class="recommend-title"><h2 id="post-title"></h2></div>';
+                            <div class="content" id="content-area"><h2><i class="fa-solid fa-spinner fa-spin"></i>読み込み中<i class="fa-solid fa-spinner fa-spin"></i></h2></div>
+                        <?php endif; ?>
                 </div>
             </div>
         </div>
@@ -47,6 +47,7 @@ if (is_page()) {
         <?php
             if (is_page() === false) {
                 echo '<script src="'.$func->getNoCacheUrl("/assets/js/feed-load.js").'"></script>';
+                echo '<script>load_feed(10);</script>';
             } else {
                 echo '<script src="'.$func->getNoCacheUrl("/assets/js/post-load.js").'"></script>';
                 echo '<script>load_post('.$_GET['p'].');</script>';
