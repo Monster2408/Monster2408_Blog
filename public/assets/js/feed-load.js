@@ -13,17 +13,29 @@ window.addEventListener('load',function(){
             html_text += '<p class="card__text">投稿日：' + dateStr + '</p>';
             html_text += '</div>';
             html_text += '<div class="card__footer">';
-            html_text += '<p class="card__text"><a href="' + link + '" class="button -compact">' + title + 'の詳細を見る</a></p>';
+            html_text += '<p class="card__text"><a href="' + link + '" class="button -compact">記事を読む</a></p>';
             html_text += '</div>';
             html_text += '</article>';
             html_text += '</div>';
             return html_text;
         }
+
+        function getCardObject(title, image, dateStr, link) {
+            var card = {
+                title: title,
+                image: image,
+                dateStr: dateStr,
+                link: link
+            };
+            return card;
+        }
         var domDoc = this.responseXML;
         console.log(domDoc);
         var items = domDoc.getElementsByTagName("item");
-        var recommendArea = document.getElementById("recommend-area");
+        const recommendArea = document.getElementById("recommend-area");
+        const newPostArea = document.getElementById("new-post-area");
         var data_text = ""; 
+        var post_list = [];
         for (var i = 0; i < items.length; i++) {
             var item = items[i];
             var title = item.getElementsByTagName("title")[0].textContent;
@@ -43,16 +55,21 @@ window.addEventListener('load',function(){
                 category = category.replace(/\]\]>/, "");
                 categories.push(category);
             }
-            if (categories.indexOf("おすすめ") == -1) {
-                continue;
-            }
-            if (categories.indexOf("非表示") != -1) {
-                continue;
-            }
             // descriptionにimgタグがあるかどうかを判定
             var image = "https://monster2408.com/blog/wp-content/themes/cocoon-master/images/no-image-320.png";
             if (description.match(/<img[^>]+src="([^">]+)"/) != null) {
                 image = description.match(/<img[^>]+src="([^">]+)"/)[1];
+            }
+            if (categories.indexOf("非表示") != -1) {
+                continue;
+            }
+            if (location.href.match(/localhost/)) {
+                post_list.push(getCardObject(title, image, dateStr, "https://localhost/?p=" + link_id));
+            } else {
+                post_list.push(getCardObject(title, image, dateStr, "https://monster2408.com/featured-products/?p=" + link_id));
+            }
+            if (categories.indexOf("おすすめ") == -1) {
+                continue;
             }
             if (location.href.match(/localhost/)) {
                 data_text += getCardHtml(title, image, dateStr, "https://localhost/?p=" + link_id);
@@ -61,6 +78,13 @@ window.addEventListener('load',function(){
             }
         }
         recommendArea.innerHTML = data_text;
+        post_list.sort((a, b) => a.dateStr > b.dateStr ? 1 : -1);
+        post_text = "";
+        for (var i = 0; i < post_list.length; i++) {
+            var post = post_list[i];
+            post_text += getCardHtml(post.title, post.image, post.dateStr, post.link);
+        }
+        newPostArea.innerHTML = post_text;
     }
 
     const req = new XMLHttpRequest();

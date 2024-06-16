@@ -12,7 +12,7 @@
 	<atom:link href="https://monster2408.com/blog/feed/" rel="self" type="application/rss+xml" />
 	<link>https://monster2408.com/blog</link>
 	<description>日々の生活を少し便利に</description>
-	<lastBuildDate>Tue, 11 Jun 2024 15:46:18 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 14 Jun 2024 10:53:58 +0000</lastBuildDate>
 	<language>ja</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,29 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>PC周辺機器をご紹介</title>
+		<link>https://monster2408.com/blog/2024/06/12/pc%e5%91%a8%e8%be%ba%e6%a9%9f%e5%99%a8%e3%82%92%e3%81%94%e7%b4%b9%e4%bb%8b/</link>
+					<comments>https://monster2408.com/blog/2024/06/12/pc%e5%91%a8%e8%be%ba%e6%a9%9f%e5%99%a8%e3%82%92%e3%81%94%e7%b4%b9%e4%bb%8b/#respond</comments>
+		
+		<dc:creator><![CDATA[monster2408]]></dc:creator>
+		<pubDate>Tue, 11 Jun 2024 16:04:07 +0000</pubDate>
+				<category><![CDATA[非表示]]></category>
+		<category><![CDATA[ガジェット]]></category>
+		<category><![CDATA[パソコン]]></category>
+		<category><![CDATA[パソコン周辺機器]]></category>
+		<guid isPermaLink="false">https://monster2408.com/blog/?p=56</guid>
+
+					<description><![CDATA[ここに本文]]></description>
+										<content:encoded><![CDATA[
+<p>ここに本文</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://monster2408.com/blog/2024/06/12/pc%e5%91%a8%e8%be%ba%e6%a9%9f%e5%99%a8%e3%82%92%e3%81%94%e7%b4%b9%e4%bb%8b/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
 		<title>デスク周りに便利なetc</title>
 		<link>https://monster2408.com/blog/2024/06/12/%e3%83%87%e3%82%b9%e3%82%af%e5%91%a8%e3%82%8a%e3%81%ab%e4%be%bf%e5%88%a9%e3%81%aaetc/</link>
 					<comments>https://monster2408.com/blog/2024/06/12/%e3%83%87%e3%82%b9%e3%82%af%e5%91%a8%e3%82%8a%e3%81%ab%e4%be%bf%e5%88%a9%e3%81%aaetc/#respond</comments>
