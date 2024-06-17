@@ -33,11 +33,11 @@ if (is_page()) {
                             <div class="recommend-title recommend-post-list"><h2>おすすめ記事</h2></div>
                             <div class="recommend-area" id="recommend-area"><h2><i class="fa-solid fa-spinner fa-spin"></i>読み込み中<i class="fa-solid fa-spinner fa-spin"></i></h2></div>
                             
-                            <div class="recommend-title new-post-list"><h2>新着記事</h2></div>';
+                            <div class="recommend-title new-post-list"><h2>新着記事</h2></div>
                             <div class="recommend-area" id="new-post-area"><h2><i class="fa-solid fa-spinner fa-spin"></i>読み込み中<i class="fa-solid fa-spinner fa-spin"></i></h2></div>
                             <a href="./new-post/" class="new-post-a-tag">最新記事一覧</a>
                         <?php else: ?>
-                            <div class="recommend-title"><h2 id="post-title"></h2></div>';
+                            <div class="recommend-title"><h2 id="post-title"></h2></div>
                             <div class="content" id="content-area"><h2><i class="fa-solid fa-spinner fa-spin"></i>読み込み中<i class="fa-solid fa-spinner fa-spin"></i></h2></div>
                         <?php endif; ?>
                 </div>
