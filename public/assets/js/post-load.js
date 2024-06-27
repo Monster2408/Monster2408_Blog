@@ -23,6 +23,7 @@ function load_post(post_id) {
             if (link_id != post_id) {
                 continue;
             } else {
+                document.title = title + " | もんすたぁのブログ";
                 title_area.innerHTML = title;
                 contentArea.innerHTML = description;
                 is_post = true;
