@@ -119,8 +119,8 @@ do_action( 'rss_tag_pre', 'rss2' );
 			$image_url = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'medium_large');
 			$thumb_url = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'thumbnail');
 		} else {
-			$image_url = array('https://monster2408.com/blog/wp-content/themes/cocoon-master/images/no-image-320.png');
-			$thumb_url = array('https://monster2408.com/blog/wp-content/themes/cocoon-master/images/no-image-320.png');
+			$image_url = array('https://monster2408.com/blog2/wp-content/themes/cocoon-master/images/no-image-320.png');
+			$thumb_url = array('https://monster2408.com/blog2/wp-content/themes/cocoon-master/images/no-image-320.png');
 		}
 		?>
 		<image><url><?php echo $image_url[0] ; ?></url></image>
