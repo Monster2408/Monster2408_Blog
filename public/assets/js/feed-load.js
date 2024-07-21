@@ -98,6 +98,9 @@ function load_feed(new_post_limit = 10) {
             if (categories.indexOf("非表示") != -1) {
                 continue;
             }
+            if (categories.indexOf("skript講座") != -1) {
+                continue;
+            }
             if (location.href.match(/localhost/)) {
                 post_list.push(getCardObject(title, image, dateStr, "https://localhost/?p=" + link_id, main_category));
             } else {
